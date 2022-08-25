@@ -20,6 +20,16 @@ public class OfficeServiceRestServerImpl implements OfficeServiceRestServer {
         return "error";
     }
 
+    @Override
+    public String convertObjectToJsonById(int id){
+        try {
+            return objectMapper.writeValueAsString(getOfficeDao().getByID(id));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "error";
+    }
+
     public OfficeDao getOfficeDao() {
         return officeDao;
     }

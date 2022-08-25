@@ -15,5 +15,9 @@ public class OfficeControllerRestServer {
     public String convertAllObjectToJson(){
         return officeServiceRestServer.convertAllObjectToJson();
     }
-
+    
+    @RequestMapping("/convertObjectToJsonById/{workerID}")
+    public String convertObjectToJsonById(@PathVariable int workerID){
+        return officeServiceRestServer.convertObjectToJsonById(id);
+    }
 }
