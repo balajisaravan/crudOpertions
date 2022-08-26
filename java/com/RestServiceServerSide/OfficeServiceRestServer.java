@@ -4,5 +4,5 @@ public interface OfficeServiceRestServer {
 
     String convertAllObjectToJson();
 
-    String convertObjectToJsonById(int id){
+    String convertObjectToJsonById(int id);
 }
